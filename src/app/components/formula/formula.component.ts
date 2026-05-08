@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common'; // Importante para el *ngFor
 
 @Component({
   selector: 'app-formula',
-  templateUrl: './formula.component.html',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule]
+  imports: [ReactiveFormsModule, CommonModule],
+  templateUrl: './formula.component.html',
+  styleUrl: './formula.component.css'
 })
 export class FormulaComponent implements OnInit {
   formulaForm!: FormGroup;
