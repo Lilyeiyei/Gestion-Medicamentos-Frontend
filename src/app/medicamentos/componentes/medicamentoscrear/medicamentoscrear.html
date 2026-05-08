@@ -1,1 +1,142 @@
-<p>medicamentoscrear works!</p>
+<h1 style="text-align: center;">Registrar Medicamentos</h1>
+
+<div class="contenedor-principal">
+
+  <div class="card-formulario">
+
+    <h2>Nuevo medicamento.</h2>
+    <hr><br>
+
+    <form>
+
+      <label>Ingrese el nombre del medicamento:</label>
+
+      <input
+        type="text"
+        placeholder="Ej: Ibuprofeno"
+        [(ngModel)]="medicamento.nombreMedicamento"
+        name="nombreMedicamento"
+      />
+
+      <label>Ingrese la presentación del medicamento:</label>
+
+      <input
+        type="text"
+        placeholder="Ej: 500mg"
+        [(ngModel)]="medicamento.miligramos"
+        name="miligramos"
+      />
+
+      <label>Ingrese la dosis recomendada:</label>
+
+      <input
+        type="text"
+        placeholder="Ej: 1 tableta"
+        [(ngModel)]="medicamento.dosis"
+        name="dosis"
+      />
+
+      <label>Seleccione la fecha de vencimiento:</label>
+
+      <input
+        type="date"
+        [(ngModel)]="medicamento.fechaVencimiento"
+        name="fechaVencimiento"
+      />
+
+      <label>Ingrese la frecuencia de la dosis:</label>
+
+      <select
+        [(ngModel)]="medicamento.frecuencia"
+        name="frecuencia"
+      >
+
+        <option value="">
+          Seleccione la frecuencia
+        </option>
+
+        <option value="Cada 4 horas">
+          Cada 4 horas
+        </option>
+
+        <option value="Cada 8 horas">
+          Cada 8 horas
+        </option>
+
+        <option value="Cada 12 horas">
+          Cada 12 horas
+        </option>
+
+        <option value="Una vez al dia">
+          Una vez al dia
+        </option>
+
+        <option value="Una vez a la semana">
+          Una vez a la semana
+        </option>
+
+        <option value="Una vez al mes">
+          Una vez al mes
+        </option>
+
+      </select>
+
+      <label>Ingrese la hora de inicio de la dosis:</label>
+
+      <select
+        [(ngModel)]="medicamento.horario"
+        name="horario"
+      >
+
+        <option value="">
+          Seleccione un horario
+        </option>
+
+        <option value="6:00 AM">
+          6:00 AM
+        </option>
+
+        <option value="8:00 AM">
+          8:00 AM
+        </option>
+
+        <option value="12:00 PM">
+          12:00 PM
+        </option>
+
+        <option value="2:00 PM">
+          2:00 PM
+        </option>
+
+        <option value="6:00 PM">
+          6:00 PM
+        </option>
+
+        <option value="10:00 PM">
+          10:00 PM
+        </option>
+
+      </select>
+
+      <button
+        type="button"
+        (click)="guardar()"
+      >
+        Guardar
+      </button>
+
+    </form>
+
+  </div>
+
+  <div class="card-lista">
+
+    <h2>Lista de medicamentos</h2>
+
+    <div class="lista-vacia">
+      No hay medicamentos registrados
+    </div>
+
+  </div>
+
+</div>
