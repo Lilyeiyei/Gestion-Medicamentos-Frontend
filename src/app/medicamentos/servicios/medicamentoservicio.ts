@@ -1,24 +1,23 @@
 import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 import { Medicamento } from '../modelo/medicamento';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class Medicamentoservicio {
 
-  private apiUrl = 'http://localhost:8080/medicamentos';
+  url = 'http://localhost:8860/kick/medicamentos';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
-  registrar(medicamento: Medicamento): Observable<Medicamento> {
+  registrar(medicamento: Medicamento) {
 
-    return this.http.post<Medicamento>(
-      this.apiUrl,
-      medicamento
-    );
+    return this.http.post(this.url, medicamento);
 
   }
 

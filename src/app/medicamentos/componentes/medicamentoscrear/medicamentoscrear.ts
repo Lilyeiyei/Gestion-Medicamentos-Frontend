@@ -48,7 +48,7 @@ export class Medicamentoscrear {
 
           console.log(error);
 
-          alert(error.error);
+          alert('Error al registrar medicamento');
 
         }
 
