@@ -1,5 +1,10 @@
-<app-navbar></app-navbar> <!-- Menu Bootstrap -->
+<nav style="background:#1a1a1a;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center">
+  <span style="color:white;font-weight:700;font-size:18px">Gestión Médica</span>
+  <div style="display:flex;gap:1.5rem">
+    <a routerLink="/doctores/crear" style="color:white;text-decoration:none">Registrar Doctor</a>
+  </div>
+</nav>
 
 <main>
-  <router-outlet></router-outlet> <!-- Cargan los componentes que se redirigen. -->
+  <router-outlet></router-outlet>
 </main>

@@ -1,10 +1,8 @@
 import { Routes } from '@angular/router';
-import {DocenteList} from './components/docente-list/docente-list';
-import {DocenteForm} from './components/docente-form/docente-form';
+import { CrearDoctorComponent } from './doctor/componentes/creardoctor/creardoctor';
 
 export const routes: Routes = [
-  { path: 'listar', component: DocenteList },
-  { path: 'crear', component: DocenteForm },
-  { path: '', redirectTo: 'listar', pathMatch: 'full' },
-  { path: '**', redirectTo: 'listar' }
+  { path: 'doctores/crear', component: CrearDoctorComponent },
+  { path: '', redirectTo: 'doctores/crear', pathMatch: 'full' },
+  { path: '**', redirectTo: 'doctores/crear' }
 ];
