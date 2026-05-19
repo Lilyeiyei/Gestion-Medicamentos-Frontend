@@ -7,7 +7,7 @@ import { FormulaModel } from '../modelo/formula.model';
   providedIn: 'root'
 })
 export class FormulaService {
-  // Cambia a 8860 y asegúrate de incluir /kick si aparece en tu Swagger
+
   private API_URL = 'http://localhost:8860/kick/formulas';
 
   constructor(private http: HttpClient) { }
