@@ -7,7 +7,7 @@ import { Doctor } from '../modelo/doctor';
   providedIn: 'root'
 })
 export class DoctorServicio {
-  private apiUrl = 'http://localhost:8860/kick/doctores';
+  private apiUrl = 'http://localhost:8620/kick/doctores';
 
   constructor(private http: HttpClient) {}
 
