@@ -1,0 +1,136 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+  background: #f0f4f8;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  height: 100%;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.4rem;
+  }
+
+  input {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+
+    &:focus { border-color: #534AB7; }
+  }
+select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  cursor: pointer;
+  transition: border 0.2s;
+
+  &:focus { border-color: #534AB7; }
+}
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #e53e3e;
+  margin-top: 0.25rem;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 1rem;
+
+  &.success { background: #EAF3DE; color: #3B6D11; }
+  &.error { background: #FCEBEB; color: #A32D2D; }
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  button {
+    flex: 1;
+    padding: 0.65rem;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-cancelar {
+    background: #f0f0f0;
+    color: #444;
+    &:hover { background: #e0e0e0; }
+  }
+
+  .btn-guardar {
+    background: #534AB7;
+    color: white;
+    &:hover { background: #3d3490; }
+    &:disabled { background: #a09cd4; cursor: not-allowed; }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+
+  th {
+    background: #1a1a1a;
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  tr:hover td { background: #f8f8f8; }
+}
+
+.empty {
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+  font-size: 14px;
+}

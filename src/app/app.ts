@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-
-import { Medicamentoscrear } from './medicamentos/componentes/medicamentoscrear/medicamentoscrear';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-
-  imports: [Medicamentoscrear],
-
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
-
   styleUrl: './app.scss'
 })
-export class AppComponent {
-}
+export class AppComponent { }

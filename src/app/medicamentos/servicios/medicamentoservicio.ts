@@ -9,7 +9,7 @@ import { Medicamento } from '../modelo/medicamento';
 })
 export class Medicamentoservicio {
 
-  url = 'http://localhost:8860/kick/medicamentos';
+  url = 'http://localhost:8620/kick/medicamentos';
 
   constructor(
     private http: HttpClient
