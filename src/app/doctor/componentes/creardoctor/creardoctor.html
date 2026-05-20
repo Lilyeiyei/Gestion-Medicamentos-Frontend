@@ -79,7 +79,15 @@
 
   <div class="panel">
     <div class="card">
-      <h2>Doctores Registrados</h2>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="margin: 0;">Doctores Registrados</h2>
+
+        <button type="button" (click)="cargarDoctores()" style="background-color:  #4F46E5; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+          Actualizar Lista
+        </button>
+      </div>
+
       <div class="empty" *ngIf="doctores.length === 0">No hay doctores registrados.</div>
       <table *ngIf="doctores.length > 0">
         <thead>

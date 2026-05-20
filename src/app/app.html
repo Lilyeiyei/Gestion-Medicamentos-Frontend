@@ -1,10 +1,12 @@
-<nav style="background:#1a1a1a;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center">
-  <span style="color:white;font-weight:700;font-size:18px">Gestión Médica</span>
-  <div style="display:flex;gap:1.5rem">
-    <a routerLink="/doctores/crear" style="color:white;text-decoration:none">Registrar Doctor</a>
-  </div>
+<nav style="background-color: #f1f5f9; padding: 15px; border-bottom: 2px solid #cbd5e1; margin-bottom: 20px;">
+
+  <a routerLink="/crearmedicamento" style="margin-right: 20px; text-decoration: none; font-weight: bold; color: #0f172a;">
+    Registrar Medicamento
+  </a>
+
+  <a routerLink="/doctores/crear" style="margin-right: 20px; text-decoration: none; font-weight: bold; color: #0f172a;">
+     Registrar Doctor
+  </a>
 </nav>
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
