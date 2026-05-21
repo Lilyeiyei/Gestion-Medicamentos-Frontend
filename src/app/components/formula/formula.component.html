@@ -1,0 +1,102 @@
+<div class="container">
+  <h2>Gestión de Fórmula Médica</h2>
+
+  <!-- Vinculamos el formulario con [formGroup] -->
+  <form [formGroup]="formulaForm" (ngSubmit)="onGuardar()">
+
+    <div class="row">
+      <!-- Identificación -->
+      <div class="col">
+        <label>Número de Identificación</label>
+        <input type="text" formControlName="identificacionPaciente" placeholder="Ej: 1234567890">
+      </div>
+
+      <!-- Nombre Paciente -->
+      <div class="col">
+        <label>Nombre del Paciente</label>
+        <input type="text" formControlName="nombrePaciente" placeholder="Nombre completo">
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- ID Medicamento -->
+      <div class="col">
+        <label>ID Medicamento</label>
+        <input type="text" formControlName="idMedicamento" placeholder="Ej: MED001">
+      </div>
+
+      <!-- Nombre Medicamento -->
+      <div class="col">
+        <label>Nombre del Medicamento</label>
+        <input type="text" formControlName="medicamento" placeholder="Ej: Acetaminofén">
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Dosis -->
+      <div class="col">
+        <label>Dosis Cantidad</label>
+        <input type="text" formControlName="dosis" placeholder="Ej: 1 tableta cada 8 horas">
+      </div>
+
+      <!-- Fecha -->
+      <div class="col">
+        <label>Fecha</label>
+        <input type="date" formControlName="fecha">
+      </div>
+    </div>
+
+    <!-- Descripción -->
+    <div class="row">
+      <div class="col">
+        <label>Descripción Fórmula</label>
+        <textarea formControlName="descripcion" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="formulaForm.invalid" class="btn-guardar">Guardar Fórmula</button>
+      <button type="button" (click)="formulaForm.reset()" class="btn-cancelar">Cancelar</button>
+    </div>
+  </form>
+
+  <!-- Notificación de error/éxito -->
+  @if (mensaje) {
+    <div [class]="mensaje.includes('éxito') ? 'alert-success' : 'alert-error'">
+      {{ mensaje }}
+    </div>
+  }
+
+  <hr>
+
+  <!-- Tabla de Resultados -->
+  <div class="tabla-container">
+    <h3>Fórmulas Registradas</h3>
+    <table>
+      <thead>
+      <tr>
+        <th>Identificación</th>
+        <th>Paciente</th>
+        <th>Medicamento</th>
+        <th>Dosis</th>
+        <th>Fecha</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (f of listaFormulas; track f.id) {
+          <tr>
+            <td>{{ f.identificacionPaciente }}</td>
+            <td>{{ f.nombrePaciente }}</td>
+            <td>{{ f.medicamento }}</td>
+            <td>{{ f.dosis }}</td>
+            <td>{{ f.fecha }}</td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="5">No hay fórmulas médicas registradas aún.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
