@@ -8,7 +8,7 @@ import { FormulaModel } from '../modelo/formula.model';
 })
 export class FormulaService {
 
-  private API_URL = 'http://localhost:8860/kick/formulas';
+  private API_URL = 'http://localhost:8620/kick/formulas';
 
   constructor(private http: HttpClient) { }
 
