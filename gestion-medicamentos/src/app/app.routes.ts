@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { PacienteForm } from './components/paciente-form/paciente-form';
+import { RegistrarPaciente } from './pacientes/componentes/registrar-paciente/registrar-paciente';
 
 export const routes: Routes = [
-  { path: 'registrar', component: PacienteForm },
-  { path: '', redirectTo: 'registrar', pathMatch: 'full' },
-  { path: '**', redirectTo: 'registrar' }
+  { path: 'registrar-paciente', component: RegistrarPaciente },
+  { path: '', redirectTo: 'registrar-paciente', pathMatch: 'full' },
+  { path: '**', redirectTo: 'registrar-paciente' }
 ];
