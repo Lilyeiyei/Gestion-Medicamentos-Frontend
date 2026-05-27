@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://gestion-medicamentos-frontend.onrender.com/api'
+  apiUrl: 'https://gestion-medicamentos-backend.onrender.com'
 };
